@@ -1,5 +1,6 @@
 # 0x00. Python - Variable Annotations
 #### `Python` `Back-end`
+![y9y25tefi5401](https://github.com/samuelselasi/alx-backend-python/assets/85158665/a5f88d5b-fd45-45c6-b388-1144ac2765db)
 
 ## Resources
 ### Read or watch:
