@@ -1,5 +1,5 @@
 # Python Backend Specialization
-![y9y25tefi5401](https://github.com/samuelselasi/alx-backend-python/assets/85158665/f8eccdef-3078-42fd-985b-2d351a73855c)
+![download](https://github.com/samuelselasi/alx-backend-python/assets/85158665/99a6546e-6867-4434-88a1-e43dd2c3ffc3)
 
 ## Table of Contents
 * [About](#about)
