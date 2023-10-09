@@ -1,5 +1,6 @@
 # 0x01. Python - Async
 #### `Python` `Back-end`
+![4aeaa9c3cb1f316c05c4](https://github.com/samuelselasi/alx-backend-python/assets/85158665/e038182b-6f42-4e73-8bf8-0d5e5aa49fef)
 
 ## Resources
 ### Read or watch:
