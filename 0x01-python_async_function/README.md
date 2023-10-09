@@ -96,3 +96,28 @@ print(measure_time(n, max_delay))
 bob@dylan:~$ ./2-main.py
 1.759705400466919
 ```
+
+[3. Tasks](./3-tasks.py)
+
+Import wait_random from 0-basic_async_syntax.
+
+Write a function (do not create an async function, use the regular function syntax to do this) `task_wait_random` that takes an integer `max_delay` and returns a `asyncio.Task`.
+```
+bob@dylan:~$ cat 3-main.py
+#!/usr/bin/env python3
+
+import asyncio
+
+task_wait_random = __import__('3-tasks').task_wait_random
+
+
+async def test(max_delay: int) -> float:
+    task = task_wait_random(max_delay)
+    await task
+    print(task.__class__)
+
+asyncio.run(test(5))
+
+bob@dylan:~$ ./3-main.py
+<class '_asyncio.Task'>
+```
