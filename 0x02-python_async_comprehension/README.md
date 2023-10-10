@@ -72,3 +72,31 @@ asyncio.run(main())
 bob@dylan:~$ ./1-main.py
 [9.861842105071727, 8.572355293354995, 1.7467182056248265, 4.0724372912858575, 0.5524750922145316, 8.084266576021555, 8.387128918690468, 1.5486451376520916, 7.713335177885325, 7.673533267041574]
 ```
+
+[2. Run time for four parallel comprehensions](./2-measure_runtime.py)
+
+Import `async_comprehension` from the previous file and write a `measure_runtime` coroutine that will execute `async_comprehension` four times in parallel using `asyncio.gather`.
+
+`measure_runtime` should measure the total runtime and return it.
+
+Notice that the total runtime is roughly `10` seconds, explain it to yourself.
+```
+bob@dylan:~$ cat 2-main.py
+#!/usr/bin/env python3
+
+import asyncio
+
+
+measure_runtime = __import__('2-measure_runtime').measure_runtime
+
+
+async def main():
+    return await(measure_runtime())
+
+print(
+    asyncio.run(main())
+)
+
+bob@dylan:~$ ./2-main.py
+10.021936893463135
+```
