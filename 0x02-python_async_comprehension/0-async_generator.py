@@ -5,7 +5,7 @@ import asyncio
 import random
 
 
-async def async_generator() -> Generator[int, None, None]:
+async def async_generator() -> Generator[float, None, None]:
     """Function that returns a random number asynchronously"""
 
     for num in range(10):
