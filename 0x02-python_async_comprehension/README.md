@@ -1,5 +1,6 @@
 # 0x02. Python - Async Comprehension
 #### `Python` `Back-end`
+<img width="638" alt="ee85b9f67c384e29525b" src="https://github.com/samuelselasi/alx-backend-python/assets/85158665/f74ca9eb-9a32-4331-9d96-343ab64be153">
 
 ## Resources
 **Read or watch**:
