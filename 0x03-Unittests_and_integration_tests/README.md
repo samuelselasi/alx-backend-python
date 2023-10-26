@@ -1,5 +1,6 @@
 # 0x03. Unittests and Integration Tests
 #### `UnitTests` `Back-end` `Integration tests`
+![f088970b450e82c881ea](https://github.com/samuelselasi/alx-backend-python/assets/85158665/08e8efd5-93f7-4f0f-8cde-f11495ed4850)
 
 Unit testing is the process of testing that a particular function returns expected results for different set of inputs. A unit test is supposed to test standard inputs and corner cases. A unit test should only test the logic defined inside the tested function. Most calls to additional functions should be mocked, especially if they make network or database calls.
 
