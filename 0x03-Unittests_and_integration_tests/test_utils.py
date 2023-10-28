@@ -44,22 +44,25 @@ class TestGetJson(TestCase):
 class TestMemoize(TestCase):
     """Class that defines attributes to test utils.memoize function"""
 
-    class TestClass:
-        """Class that defines attributes to test memoize"""
+    def test_memoize(self):
+        """Method that using test memorize to check if func is called twice"""
 
-        def a_method(self):
-            """Method that returns an instance of memoize class"""
+        class TestClass:
+            """Class that defines attributes to test memoize"""
 
-            return 42
+            def a_method(self):
+                """Method that returns an instance of memoize class"""
 
-        @memoize
-        def a_property(self):
-            """Method that defines a property instance of memoize"""
+                return 42
 
-            return self.a_method()
+            @memoize
+            def a_property(self):
+                """Method that defines a property instance of memoize"""
 
-    with patch.object(TestClass, "a_method") as mock:
-        test = TestClass()
-        test.a_property
-        test.a_property
-        mock.assert_called_once
+                return self.a_method()
+
+        with patch.object(TestClass, "a_method") as mock:
+            test = TestClass()
+            test.a_property
+            test.a_property
+            mock.assert_called_once
