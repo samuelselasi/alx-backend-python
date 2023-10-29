@@ -28,7 +28,7 @@ class TestGithubOrgClient(TestCase):
                           new_callable=PropertyMock,
                           return_value={"repos_url": "Test value"}
                           ) as mock:
-            test_json = {"repos_url": "holberton"}
+            test_json = {"repos_url": "Test value"}
             client = GithubOrgClient(test_json.get("repos_url"))
             res = client._public_repos_url
 
