@@ -1199,3 +1199,20 @@ class TestClass:
         return self.a_method()
 ```
 Use `unittest.mock.patch` to mock `a_method`. Test that when calling `a_property` twice, the correct result is returned but `a_method` is only called once using `assert_called_once`.
+
+[4. Parameterize and patch as decorators](./test_client.py)
+
+Familiarize yourself with the `client.GithubOrgClient` class.
+
+In a new `test_client.py` file, declare the `TestGithubOrgClient(unittest.TestCase)` class and implement the `test_org` method.
+
+This method should test that `GithubOrgClient.org` returns the correct value.
+
+Use `@patch` as a decorator to make sure `get_json` is called once with the expected argument but make sure it is not executed.
+
+Use `@parameterized.expand` as a decorator to parametrize the test with a couple of `org` examples to pass to `GithubOrgClient`, in this order:
+
+* `google`
+* `abc`
+
+Of course, no external HTTP calls should be made.
