@@ -1216,3 +1216,14 @@ Use `@parameterized.expand` as a decorator to parametrize the test with a couple
 * `abc`
 
 Of course, no external HTTP calls should be made.
+
+
+[5. Mocking a property](./test_client.py)
+
+`memoize` turns methods into properties. Read up on how to mock a property (see [resource](https://en.wikipedia.org/wiki/Memoization)).
+
+Implement the `test_public_repos_url` method to unit-test `GithubOrgClient._public_repos_url`.
+
+Use `patch` as a context manager to patch `GithubOrgClient.org` and make it return a known payload.
+
+Test that the result of `_public_repos_url` is the expected one based on the mocked payload.
