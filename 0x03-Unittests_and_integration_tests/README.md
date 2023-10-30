@@ -1240,3 +1240,15 @@ Use `patch` as a context manager to mock `GithubOrgClient._public_repos_url` and
 Test that the list of repos is what you expect from the chosen payload.
 
 Test that the mocked property and the mocked `get_json` was called once.
+
+
+[7. Parameterize](./test_client.py)
+
+Implement `TestGithubOrgClient.test_has_license` to unit-test `GithubOrgClient.has_license`.
+
+Parametrize the test with the following inputs
+```
+repo={"license": {"key": "my_license"}}, license_key="my_license"
+repo={"license": {"key": "other_license"}}, license_key="my_license"
+```
+You should also parameterize the expected returned value.
