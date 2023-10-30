@@ -25,14 +25,14 @@ class TestGithubOrgClient(TestCase):
         self.assertEqual(res, mock.return_value)
         mock.assert_called_once
 
-    def test_public_repos_url(self):
+    def test_public_repos_url(self) -> None:
         """Method to test GithubOrgClient._public_repos_url function"""
 
         with patch.object(GithubOrgClient, 'org',
                           new_callable=PropertyMock,
                           return_value={"repos_url": "Test value"}
                           ) as mock:
-            test_json = {"repos_url": "Test value"}
+            test_json = {"repos_url": "https://api.github.com/users/google"}
             client = GithubOrgClient(test_json.get("repos_url"))
             res = client._public_repos_url
 
