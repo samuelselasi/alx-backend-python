@@ -1269,3 +1269,12 @@ The `setupClass` should mock `requests.get` to return example payloads found in 
 Use `patch` to start a patcher named `get_patcher`, and use `side_effect` to make sure the mock of `requests.get(url).json()` returns the correct fixtures for the various values of `url` that you anticipate to receive.
 
 Implement the `tearDownClass` class method to stop the patcher.
+
+
+[9. Integration tests](./test_client.py)
+
+Implement the `test_public_repos` method to test `GithubOrgClient.public_repos`.
+
+Make sure that the method returns the expected results based on the fixtures.
+
+Implement `test_public_repos_with_license` to test the `public_repos` with the argument `license="apache-2.0"` and make sure the result matches the expected value from the fixtures.
