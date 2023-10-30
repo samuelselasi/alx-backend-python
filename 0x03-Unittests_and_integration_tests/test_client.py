@@ -74,7 +74,7 @@ class TestIntegrationGithubOrgClient(TestCase):
         """Method to prepare test fixture"""
 
         cls.get_patcher = patch('requests.get', side_effect=HTTPError)
-        cls.get_patcher.start()
+        # cls.get_patcher.start()
 
     @classmethod
     def tearDownClass(cls):
